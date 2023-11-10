@@ -8,4 +8,10 @@ export class AgeCalculator {
     let mercuryYears = parseFloat(mercuryMathString.match(/^-?\d+(?:\.\d{0,2})?/)[0]);
     return mercuryYears;
   }
+
+  calculateVenusYears() {
+    let venusMathString = (this.earthYears / 0.62).toString();
+    let venusYears = parseFloat(venusMathString.match(/^-?\d+(?:\.\d{0,2})?/)[0]);
+    return venusYears;
+  }
 }
