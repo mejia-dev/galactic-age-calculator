@@ -78,7 +78,12 @@ describe("AgeCalculator", () => {
   });
 
   test("should return how many Earth years it will take to reach the age entered into the getYearsTil prototype", () => {
-    myAgeCalculator.getYearsTil(14);
-    expect(myAgeCalculator.lastYearsTilResult.earthYears).toEqual(4);
+    myAgeCalculator.getYearsTil(15);
+    expect(myAgeCalculator.lastYearsTilResult.earthYears).toEqual(5);
+  });
+
+  test("should return how many Mercury years it will take to reach the age entered into the getYearsTil prototype", () => {
+    myAgeCalculator.getYearsTil(15);
+    expect(myAgeCalculator.lastYearsTilResult.mercuryYears).toEqual(20.83);
   });
 })
