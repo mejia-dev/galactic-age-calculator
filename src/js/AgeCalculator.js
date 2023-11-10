@@ -26,4 +26,10 @@ export class AgeCalculator {
     let jupiterYears = parseFloat(jupiterMathString.match(/^-?\d+(?:\.\d{0,2})?/)[0]);
     return jupiterYears;
   }
+
+  getYearsSince(input) {
+    if (input > this.earthYears) {
+      return "Invalid input. Prior birthday can't be larger than your current age";
+    }
+  }
 }
