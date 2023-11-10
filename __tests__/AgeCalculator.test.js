@@ -76,4 +76,9 @@ describe("AgeCalculator", () => {
   test("should verify that input for getYearsTil prototype is larger than this.earthYears and return an error if invalid", () => {
     expect(myAgeCalculator.getYearsTil(2)).toEqual("Invalid input. Future age must be larger than your current age");
   });
+
+  test("should return how many Earth years it will take to reach the age entered into the getYearsTil prototype", () => {
+    myAgeCalculator.getYearsTil(14);
+    expect(myAgeCalculator.lastYearsTilResult.earthYears).toEqual(4);
+  });
 })
