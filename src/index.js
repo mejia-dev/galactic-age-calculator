@@ -11,6 +11,7 @@ function enterAgeForm() {
   myAgeCalculator = new AgeCalculator(age);
   displayBaseAges();
   hideAgeForm();
+  toggleManipulationForms();
 }
 
 function hideAgeForm() {
@@ -32,7 +33,9 @@ function displayBaseAges() {
   document.getElementById("planetHolder").append(pTag);
 }
 
-
+function toggleManipulationForms() {
+  document.getElementById("manipulationFormsHolder").classList.toggle("hidden");
+}
 
 window.addEventListener("load", function () {
   document.getElementById("enterAgeForm").addEventListener("submit", enterAgeForm);
