@@ -29,6 +29,6 @@ describe("AgeCalculator", () => {
   });
 
   test("should verify that input for getYearsSince prototype is smaller than this.earthYears and return an error if invalid", () => {
-    expect(myAgeCalculator.getYearsSince(43).toEqual("Invalid input. Prior birthday can't be larger than your current age"));
+    expect(myAgeCalculator.getYearsSince(43)).toEqual("Invalid input. Prior birthday can't be larger than your current age");
   });
 })
