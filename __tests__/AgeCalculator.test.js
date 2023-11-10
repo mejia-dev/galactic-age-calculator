@@ -36,4 +36,8 @@ describe("AgeCalculator", () => {
     myAgeCalculator.getYearsSince(8);
     expect(myAgeCalculator.lastYearsSinceResult.earthYears).toEqual(2);
   });
+
+  test("should allow calculateMercuryYears to have an optional parameter that can be used to calculate against a specific earthYears input", () => {
+    expect(myAgeCalculator.calculateMercuryYears(13)).toEqual(54.16);
+  });
 })
