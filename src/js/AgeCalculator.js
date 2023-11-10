@@ -9,8 +9,8 @@ export class AgeCalculator {
     return mercuryYears;
   }
 
-  calculateVenusYears() {
-    let venusMathString = (this.earthYears / 0.62).toString();
+  calculateVenusYears(input) {
+    let venusMathString = ((input || this.earthYears) / 0.62).toString();
     let venusYears = parseFloat(venusMathString.match(/^-?\d+(?:\.\d{0,2})?/)[0]);
     return venusYears;
   }
