@@ -35,5 +35,6 @@ export class AgeCalculator {
     this.lastYearsSinceResult = {};
     this.lastYearsSinceResult.earthYears = earthYearsSince;
     this.lastYearsSinceResult.mercuryYears = this.calculateMercuryYears(earthYearsSince);
+    this.lastYearsSinceResult.venusYears = this.calculateVenusYears(earthYearsSince);
   }
 }
