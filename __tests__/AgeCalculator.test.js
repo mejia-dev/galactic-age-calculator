@@ -13,6 +13,6 @@ describe ("AgeCalculator", () => {
   });
 
   test("should calculate the age divided by .24 (to two decimal places) when calculateMercuryYears is called", () => {
-    expect(myAgeCalculator.calculateMercuryYears).toEqual(41.66)
+    expect(myAgeCalculator.calculateMercuryYears()).toEqual(41.66)
   });
 })
