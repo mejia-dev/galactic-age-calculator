@@ -62,4 +62,9 @@ describe("AgeCalculator", () => {
     myAgeCalculator.getYearsSince(6);
     expect(myAgeCalculator.lastYearsSinceResult.venusYears).toEqual(6.45);
   });
+
+  test("should return how many Mars years have passed since the age entered into the getYearsSince prototype", () => {
+    myAgeCalculator.getYearsSince(6);
+    expect(myAgeCalculator.lastYearsSinceResult.marsYears).toEqual(2.12);
+  });
 })
