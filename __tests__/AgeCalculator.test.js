@@ -91,4 +91,9 @@ describe("AgeCalculator", () => {
     myAgeCalculator.getYearsTil(15);
     expect(myAgeCalculator.lastYearsTilResult.venusYears).toEqual(8.06);
   });
+
+  test("should return how many Mars years it will take to reach the age entered into the getYearsTil prototype", () => {
+    myAgeCalculator.getYearsTil(15);
+    expect(myAgeCalculator.lastYearsTilResult.marsYears).toEqual(2.65);
+  });
 })
