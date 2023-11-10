@@ -31,7 +31,9 @@ export class AgeCalculator {
     if (input > this.earthYears) {
       return "Invalid input. Prior birthday can't be larger than your current age";
     }
+    const earthYearsSince = this.earthYears - input;
     this.lastYearsSinceResult = {};
-    this.lastYearsSinceResult.earthYears = this.earthYears - input;
+    this.lastYearsSinceResult.earthYears = earthYearsSince;
+    this.lastYearsSinceResult.mercuryYears = this.calculateMercuryYears(earthYearsSince);
   }
 }
