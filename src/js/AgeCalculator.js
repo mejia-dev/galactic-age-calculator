@@ -39,4 +39,10 @@ export class AgeCalculator {
     this.lastYearsSinceResult.marsYears = this.calculateMarsYears(earthYearsSince);
     this.lastYearsSinceResult.jupiterYears = this.calculateJupiterYears(earthYearsSince);
   }
+
+  getYearsTil(input) {
+    if (input < this.earthYears) {
+      return "Invalid input. Future age must be larger than your current age";
+    }
+  }
 }
