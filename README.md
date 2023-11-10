@@ -1,8 +1,8 @@
-# HTML/CSS/JS Project Template (Application Name)
+# Super Galactic Age Calculator
 
-#### (Brief Description of Application)
+#### Calculate your age on Mercury, Venus, Mars, or Jupiter!
 
-#### By (Your Name Here)
+#### By github.com/mejia-dev
 
 ## Technologies Used
 
@@ -17,28 +17,23 @@
 
 ## Description
 
+This webpage uses JavaScript to calculate a user's age on different planets, as well as count forward/backward to a specific age.
+
 ## Setup/Installation Requirements
 
-Modify the following items before initializing anything else:
-* webpack.config.js
-  * Line 24: Update project name
-* package.json
-  * Line 2: Update project name
+Option A:
+* Navigate to https://mejia-dev.github.io/galactic-age-calculator/ in your browser of choice
 
-Run the following commands from GitBash:
-* Initialize npm: $ npm init y
-* Install packages: $ npm install
-* Build the project using webpack: $ npm run build
+Option B:
+* Clone this repository to your desktop (from the Git Bash console, run "git clone https://github.com/mejia-dev/galactic-age-calculator.git" without quotes)
+* Install Modules: From the Git Bash console, run "npm install" without quotes.
+* Build Distribution: From the Git Bash console, run "npm run build" without quotes.
+* Launch Webserver: From the Git Bash console, run "npm run start" without quotes.
 
-Optionally, run the following commands:
-* Start a development server: $ npm run start
-* Run ESLint against the src folder: $ npm run lint
-* Run Jest tests using: $ npm run test
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* none
 
 ## License
 
