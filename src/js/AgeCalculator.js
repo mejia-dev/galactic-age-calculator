@@ -47,5 +47,6 @@ export class AgeCalculator {
     const earthYearsTil = input - this.earthYears;
     this.lastYearsTilResult = {};
     this.lastYearsTilResult.earthYears = earthYearsTil;
+    this.lastYearsTilResult.mercuryYears = this.calculateMercuryYears(earthYearsTil);
   }
 }
