@@ -1,1 +1,1 @@
-import { AgeCalculator } from '..src/js/AgeCalculator.js';
+import { AgeCalculator } from '../src/js/AgeCalculator.js';
