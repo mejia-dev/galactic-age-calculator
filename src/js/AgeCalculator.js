@@ -3,8 +3,8 @@ export class AgeCalculator {
     this.earthYears = ageInput;
   }
 
-  calculateMercuryYears() {
-    let mercuryMathString = (this.earthYears / 0.24).toString();
+  calculateMercuryYears(input) {
+    let mercuryMathString = ((input || this.earthYears) / 0.24).toString();
     let mercuryYears = parseFloat(mercuryMathString.match(/^-?\d+(?:\.\d{0,2})?/)[0]);
     return mercuryYears;
   }
