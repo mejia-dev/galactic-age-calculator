@@ -52,4 +52,9 @@ describe("AgeCalculator", () => {
   test("should allow calculateJupiterYears to have an optional parameter that can be used to calculate against a specific earthYears input", () => {
     expect(myAgeCalculator.calculateJupiterYears(13)).toEqual(1.09);
   });
+
+  test("should return how many Mercury years have passed since the age entered into the getYearsSince prototype", () => {
+    myAgeCalculator.getYearsSince(6);
+    expect(myAgeCalculator.lastYearsSinceResult.mercuryYears).toEqual(16.66);
+  });
 })
