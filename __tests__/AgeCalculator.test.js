@@ -48,4 +48,8 @@ describe("AgeCalculator", () => {
   test("should allow calculateMarsYears to have an optional parameter that can be used to calculate against a specific earthYears input", () => {
     expect(myAgeCalculator.calculateMarsYears(13)).toEqual(6.91);
   });
+
+  test("should allow calculateJupiterYears to have an optional parameter that can be used to calculate against a specific earthYears input", () => {
+    expect(myAgeCalculator.calculateJupiterYears(13)).toEqual(1.09);
+  });
 })
