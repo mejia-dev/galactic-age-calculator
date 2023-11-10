@@ -12,7 +12,12 @@ describe ("AgeCalculator", () => {
     expect(myAgeCalculator.earthYears).toEqual(10);
   });
 
-  test("should calculate the age divided by .24 (to two decimal places) when calculateMercuryYears is called", () => {
+  test("should calculate the age divided by .24 to two decimal places (not rounded) when calculateMercuryYears is called", () => {
     expect(myAgeCalculator.calculateMercuryYears()).toEqual(41.66)
   });
+
+  test("should calculate the age divided by .62 to two decimal places (not rounded) when calculateVenusYears is called", () => {
+    expect(myAgeCalculator.calculateVenusYears()).toEqual(16.12)
+  });
+
 })
