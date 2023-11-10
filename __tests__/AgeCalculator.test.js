@@ -86,4 +86,9 @@ describe("AgeCalculator", () => {
     myAgeCalculator.getYearsTil(15);
     expect(myAgeCalculator.lastYearsTilResult.mercuryYears).toEqual(20.83);
   });
+
+  test("should return how many Venus years it will take to reach the age entered into the getYearsTil prototype", () => {
+    myAgeCalculator.getYearsTil(15);
+    expect(myAgeCalculator.lastYearsTilResult.venusYears).toEqual(8.06);
+  });
 })
