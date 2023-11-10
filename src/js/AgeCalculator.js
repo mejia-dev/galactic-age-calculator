@@ -48,5 +48,6 @@ export class AgeCalculator {
     this.lastYearsTilResult = {};
     this.lastYearsTilResult.earthYears = earthYearsTil;
     this.lastYearsTilResult.mercuryYears = this.calculateMercuryYears(earthYearsTil);
+    this.lastYearsTilResult.venusYears = this.calculateVenusYears(earthYearsTil);
   }
 }
