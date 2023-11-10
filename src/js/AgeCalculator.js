@@ -15,8 +15,8 @@ export class AgeCalculator {
     return venusYears;
   }
 
-  calculateMarsYears() {
-    let marsMathString = (this.earthYears / 1.88).toString();
+  calculateMarsYears(input) {
+    let marsMathString = ((input || this.earthYears) / 1.88).toString();
     let marsYears = parseFloat(marsMathString.match(/^-?\d+(?:\.\d{0,2})?/)[0]);
     return marsYears;
   }
