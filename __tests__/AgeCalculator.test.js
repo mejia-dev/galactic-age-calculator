@@ -23,4 +23,8 @@ describe("AgeCalculator", () => {
   test("should calculate the age divided by 1.88 to two decimal places (not rounded) when calculateMarsYears is called", () => {
     expect(myAgeCalculator.calculateMarsYears()).toEqual(5.31);
   });
+
+  test("should calculate the age divided by 11.86 to two decimal places (not rounded) when calculateJupiterYears is called", () => {
+    expect(myAgeCalculator.calculateJupiterYears()).toEqual(0.84);
+  });
 })
