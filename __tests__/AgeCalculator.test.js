@@ -96,4 +96,9 @@ describe("AgeCalculator", () => {
     myAgeCalculator.getYearsTil(15);
     expect(myAgeCalculator.lastYearsTilResult.marsYears).toEqual(2.65);
   });
+
+  test("should return how many Jupiter years it will take to reach the age entered into the getYearsTil prototype", () => {
+    myAgeCalculator.getYearsTil(15);
+    expect(myAgeCalculator.lastYearsTilResult.jupiterYears).toEqual(0.42);
+  });
 })
