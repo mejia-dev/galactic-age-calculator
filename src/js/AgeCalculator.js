@@ -20,4 +20,10 @@ export class AgeCalculator {
     let marsYears = parseFloat(marsMathString.match(/^-?\d+(?:\.\d{0,2})?/)[0]);
     return marsYears;
   }
+
+  calculateJupiterYears() {
+    let jupiterMathString = (this.earthYears / 11.86).toString();
+    let jupiterYears = parseFloat(jupiterMathString.match(/^-?\d+(?:\.\d{0,2})?/)[0]);
+    return jupiterYears;
+  }
 }
