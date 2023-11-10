@@ -10,17 +10,20 @@ function enterAgeForm() {
 
   let age = parseInt(document.getElementById("age-input").value);
   myAgeCalculator = new AgeCalculator(age);
-  // document.getElementById("planetDiv").innerText = null;
-  // Age on Mercury: ${myAgeCalculator.calculateMercuryYears()}
-  // Age on Venus: ${myAgeCalculator.calculateVenusYears()}
-  // Age on Mars: ${myAgeCalculator.calculateMarsYears()}
-  // Age on Jupiter: ${myAgeCalculator.calculateJupiterYears()}
+  
   const pTag = document.createElement("p");
-  let earthYears = myAgeCalculator.earthYears;
-  console.log(earthYears.toString());
 
-  pTag.append(earthYears);
-  document.getElementById("outputDiv").append(pTag);
+  pTag.append(`Age on Earth: ${myAgeCalculator.earthYears}`);
+  pTag.append(document.createElement("br"));
+  pTag.append(`Age on Mercury: ${myAgeCalculator.calculateMercuryYears()}`);
+  pTag.append(document.createElement("br"));
+  pTag.append(`Age on Venus: ${myAgeCalculator.calculateVenusYears()}`);
+  pTag.append(document.createElement("br"));
+  pTag.append(`Age on Mars: ${myAgeCalculator.calculateMarsYears()}`);
+  pTag.append(document.createElement("br"));
+  pTag.append(`Age on Jupiter: ${myAgeCalculator.calculateJupiterYears()}`);
+
+  document.getElementById("planetHolder").append(pTag);
 }
 
 window.addEventListener("load", function() {
