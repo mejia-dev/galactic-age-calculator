@@ -44,5 +44,8 @@ export class AgeCalculator {
     if (input < this.earthYears) {
       return "Invalid input. Future age must be larger than your current age";
     }
+    const earthYearsTil = input - this.earthYears;
+    this.lastYearsTilResult = {};
+    this.lastYearsTilResult.earthYears = earthYearsTil;
   }
 }
