@@ -7,25 +7,33 @@ let myAgeCalculator;
 
 function enterAgeForm() {
   event.preventDefault();
-
   let age = parseInt(document.getElementById("age-input").value);
   myAgeCalculator = new AgeCalculator(age);
-  
+  displayBaseAges();
+  hideAgeForm();
+}
+
+function hideAgeForm() {
+  document.getElementById("formHolder").prepend(document.createElement("br"));
+  document.getElementById("enterAgeForm").setAttribute("class","hidden");
+}
+
+function displayBaseAges() {
   const pTag = document.createElement("p");
-
-  pTag.append(`Age on Earth: ${myAgeCalculator.earthYears}`);
+  pTag.append(`Age on Earth: ${myAgeCalculator.earthYears} years old`);
   pTag.append(document.createElement("br"));
-  pTag.append(`Age on Mercury: ${myAgeCalculator.calculateMercuryYears()}`);
+  pTag.append(`Age on Mercury: ${myAgeCalculator.calculateMercuryYears()} years old`);
   pTag.append(document.createElement("br"));
-  pTag.append(`Age on Venus: ${myAgeCalculator.calculateVenusYears()}`);
+  pTag.append(`Age on Venus: ${myAgeCalculator.calculateVenusYears()} years old`);
   pTag.append(document.createElement("br"));
-  pTag.append(`Age on Mars: ${myAgeCalculator.calculateMarsYears()}`);
+  pTag.append(`Age on Mars: ${myAgeCalculator.calculateMarsYears()} years old`);
   pTag.append(document.createElement("br"));
-  pTag.append(`Age on Jupiter: ${myAgeCalculator.calculateJupiterYears()}`);
-
+  pTag.append(`Age on Jupiter: ${myAgeCalculator.calculateJupiterYears()} years old`);
   document.getElementById("planetHolder").append(pTag);
 }
 
-window.addEventListener("load", function() {
+
+
+window.addEventListener("load", function () {
   document.getElementById("enterAgeForm").addEventListener("submit", enterAgeForm);
 });
