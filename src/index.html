@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Super Galactic Age Calculator!</title>
 </head>
-<body>
-  <h1>Perform Galactic Age Calculations:</h1>
 
+<body>
+  
   <div id="formHolder">
+    <h1>Perform Galactic Age Calculations:</h1>
     <form id="enterAgeForm">
       <label for="age-input">Enter your age to get started:</label>
       <input id="age-input" type="number">
@@ -14,6 +16,7 @@
     </form>
 
     <div id="manipulationFormsHolder" class="hidden">
+      <br>
       <form id="yearsSinceForm">
         <h4>Determine how many years have passed on each planet since a past birthday!</h4>
         <label for="yearsSinceInput"><em>Enter a prior age:</em></label>
@@ -27,33 +30,44 @@
         <input id="yearsSinceInput" type="number">
         <button type="submit">Calculate</button>
       </form>
-
-      </firm>
     </div>
   </div>
+
+  <br><br><br>
 
   <div id="planetsHolder">
     <div id="mercuryDiv" class="planetHolder">
       <img src="assets/images/mercury.gif" alt="Mercury gif" class="planetGIF">
+      <h3 class="planetTitle">Mercury</h3>
+      <p id="mercuryTextHolder"></p>
     </div>
 
     <div id="venusDiv" class="planetHolder">
       <img src="assets/images/venus.gif" alt="Venus gif" class="planetGIF">
+      <h3 class="planetTitle">Venus</h3>
+      <p id="venusTextHolder"></p>
     </div>
 
     <div id="planetEarthDiv" class="planetHolder">
       <img src="assets/images/earth.gif" alt="Earth gif" class="planetGIF">
+      <h3 class="planetTitle">Earth</h3>
+      <p id="earthTextHolder"></p>
     </div>
 
     <div id="planetMarsDiv" class="planetHolder">
       <img src="assets/images/mars.gif" alt="Mars gif" class="planetGIF">
+      <h3 class="planetTitle">Mars</h3>
+      <p id="marsTextHolder"></p>
     </div>
 
     <div id="planetJupiterDiv" class="planetHolder">
       <img src="assets/images/jupiter.gif" alt="Jupiter gif" class="planetGIF">
+      <h3 class="planetTitle">Jupiter</h3>
+      <p id="jupiterTextHolder"></p>
     </div>
 
   </div>
 
 </body>
+
 </html>
