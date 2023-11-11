@@ -34,7 +34,7 @@ function handleYearsSinceForm() {
   event.preventDefault();
   let yearsSinceInput = parseInt(document.getElementById("yearsSinceInput").value);
   myAgeCalculator.getYearsSince(yearsSinceInput);
-  if (yearsSinceInput > myAgeCalculator.earthYears) {
+  if (yearsSinceInput >= myAgeCalculator.earthYears) {
     document.getElementById("yearsSinceFormError").removeAttribute("class");
     return;
   }
@@ -46,7 +46,24 @@ function handleYearsSinceForm() {
   document.getElementById("jupiterYearsSinceResult").innerText = (`${myAgeCalculator.lastYearsSinceResult.jupiterYears} years have passed since you were ${yearsSinceInput}`);
 }
 
+function handleYearsTilForm() {
+  event.preventDefault();
+  let yearsTilInput = parseInt(document.getElementById("yearsTilInput").value);
+  myAgeCalculator.getYearsTil(yearsTilInput);
+  if (yearsTilInput <= myAgeCalculator.earthYears) {
+    document.getElementById("yearsTilFormError").removeAttribute("class");
+    return;
+  }
+  document.getElementById("yearsTilFormError").setAttribute("class", "hidden");
+  document.getElementById("mercuryYearsTilResult").innerText = (`${myAgeCalculator.lastYearsTilResult.mercuryYears} years left until you are ${yearsTilInput}`);
+  document.getElementById("venusYearsTilResult").innerText = (`${myAgeCalculator.lastYearsTilResult.venusYears} years left until you are ${yearsTilInput}`);
+  document.getElementById("earthYearsTilResult").innerText = (`${myAgeCalculator.lastYearsTilResult.earthYears} years left until you are ${yearsTilInput}`);
+  document.getElementById("marsYearsTilResult").innerText = (`${myAgeCalculator.lastYearsTilResult.marsYears} years left until you are ${yearsTilInput}`);
+  document.getElementById("jupiterYearsTilResult").innerText = (`${myAgeCalculator.lastYearsTilResult.jupiterYears} years left until you are ${yearsTilInput}`);
+}
+
 window.addEventListener("load", function () {
   document.getElementById("enterAgeForm").addEventListener("submit", handleEnterAgeForm);
   document.getElementById("yearsSinceForm").addEventListener("submit", handleYearsSinceForm);
+  document.getElementById("yearsTilForm").addEventListener("submit", handleYearsTilForm);
 });
