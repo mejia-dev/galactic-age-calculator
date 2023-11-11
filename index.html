@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.cdnfonts.com/css/sf-distant-galaxy" rel="stylesheet">
+  <title>Super Galactic Age Calculator!</title>
+</head>
+
+<body>
+
+  <div id="formHolder">
+    <h1 id="title">Super Galactic <br> <span id="largerTitle">Age Calculator</span></h1>
+    <form id="enterAgeForm">
+      <label for="age-input">Enter your age to get started:</label>
+      <input id="age-input" type="number">
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="manipulationFormsHolder" class="hidden">
+      <br>
+      <form id="yearsSinceForm">
+        <h4>Determine how many years have passed on each planet since a past birthday!</h4>
+        <label for="yearsSinceInput"><em>Enter a prior age:</em></label>
+        <input id="yearsSinceInput" type="number">
+        <button type="submit">Calculate</button>
+        <div id="yearsSinceFormError" class="hidden">
+          <br>
+          <p>Invalid input. Prior birthday can't be larger than or equal to your current age.</p>
+        </div>
+      </form>
+      <br><br>
+      <form id="yearsTilForm">
+        <h4>Determine how many years have yet to pass on each planet until a future birthday!</h4>
+        <label for="yearsTilInput"><em>Enter a future age:</em></label>
+        <input id="yearsTilInput" type="number">
+        <button type="submit">Calculate</button>
+        <div id="yearsTilFormError" class="hidden">
+          <br>
+          <p>Invalid input. Future age must be larger than or equal to your current age.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <br><br><br>
+
+  <div id="planetsHolder">
+    <div id="mercuryDiv" class="planetHolder">
+      <img src="assets/images/mercury.gif" alt="Mercury gif" class="planetGIF">
+      <h3 class="planetTitle">Mercury</h3>
+      <p id="mercuryTextHolder"></p>
+      <p id="mercuryYearsSinceResult"></p>
+      <p id="mercuryYearsTilResult"></p>
+    </div>
+
+    <div id="venusDiv" class="planetHolder">
+      <img src="assets/images/venus.gif" alt="Venus gif" class="planetGIF">
+      <h3 class="planetTitle">Venus</h3>
+      <p id="venusTextHolder"></p>
+      <p id="venusYearsSinceResult"></p>
+      <p id="venusYearsTilResult"></p>
+    </div>
+
+    <div id="planetEarthDiv" class="planetHolder">
+      <img src="assets/images/earth.gif" alt="Earth gif" class="planetGIF">
+      <h3 class="planetTitle">Earth</h3>
+      <p id="earthTextHolder"></p>
+      <p id="earthYearsSinceResult"></p>
+      <p id="earthYearsTilResult"></p>
+    </div>
+
+    <div id="planetMarsDiv" class="planetHolder">
+      <img src="assets/images/mars.gif" alt="Mars gif" class="planetGIF">
+      <h3 class="planetTitle">Mars</h3>
+      <p id="marsTextHolder"></p>
+      <p id="marsYearsSinceResult"></p>
+      <p id="marsYearsTilResult"></p>
+    </div>
+
+    <div id="planetJupiterDiv" class="planetHolder">
+      <img src="assets/images/jupiter.gif" alt="Jupiter gif" class="planetGIF">
+      <h3 class="planetTitle">Jupiter</h3>
+      <p id="jupiterTextHolder"></p>
+      <p id="jupiterYearsSinceResult"></p>
+      <p id="jupiterYearsTilResult"></p>
+    </div>
+
+  </div>
+
+<script defer src="bundle.js"></script></body>
+
+</html>
