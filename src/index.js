@@ -5,7 +5,7 @@ import { AgeCalculator } from './js/AgeCalculator.js';
 
 let myAgeCalculator;
 
-function enterAgeForm() {
+function handleEnterAgeForm() {
   event.preventDefault();
   let age = parseInt(document.getElementById("age-input").value);
   myAgeCalculator = new AgeCalculator(age);
@@ -15,7 +15,7 @@ function enterAgeForm() {
 }
 
 function hideAgeForm() {
-  document.getElementById("enterAgeForm").setAttribute("class","hidden");
+  document.getElementById("enterAgeForm").setAttribute("class", "hidden");
 }
 
 function displayBaseAges() {
@@ -30,6 +30,23 @@ function toggleManipulationForms() {
   document.getElementById("manipulationFormsHolder").classList.toggle("hidden");
 }
 
+function handleYearsSinceForm() {
+  event.preventDefault();
+  let yearsSinceInput = parseInt(document.getElementById("yearsSinceInput").value);
+  myAgeCalculator.getYearsSince(yearsSinceInput);
+  if (yearsSinceInput > myAgeCalculator.earthYears) {
+    document.getElementById("yearsSinceFormError").removeAttribute("class");
+    return;
+  }
+  document.getElementById("yearsSinceFormError").setAttribute("class", "hidden");
+  document.getElementById("mercuryYearsSinceResult").innerText = (`${myAgeCalculator.lastYearsSinceResult.mercuryYears} years have passed since you were ${yearsSinceInput}`);
+  document.getElementById("venusYearsSinceResult").innerText = (`${myAgeCalculator.lastYearsSinceResult.venusYears} years have passed since you were ${yearsSinceInput}`);
+  document.getElementById("earthYearsSinceResult").innerText = (`${myAgeCalculator.lastYearsSinceResult.earthYears} years have passed since you were ${yearsSinceInput}`);
+  document.getElementById("marsYearsSinceResult").innerText = (`${myAgeCalculator.lastYearsSinceResult.marsYears} years have passed since you were ${yearsSinceInput}`);
+  document.getElementById("jupiterYearsSinceResult").innerText = (`${myAgeCalculator.lastYearsSinceResult.jupiterYears} years have passed since you were ${yearsSinceInput}`);
+}
+
 window.addEventListener("load", function () {
-  document.getElementById("enterAgeForm").addEventListener("submit", enterAgeForm);
+  document.getElementById("enterAgeForm").addEventListener("submit", handleEnterAgeForm);
+  document.getElementById("yearsSinceForm").addEventListener("submit", handleYearsSinceForm);
 });

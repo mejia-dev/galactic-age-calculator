@@ -28,3 +28,7 @@ body {
   margin-right: auto;
   display: block;
 }
+
+#yearsSinceFormError {
+  color: aqua;
+}
