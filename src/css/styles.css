@@ -7,6 +7,14 @@ body {
   display: none;
 }
 
+#title {
+  font-family: 'SF Distant Galaxy', sans-serif;
+}
+
+#largerTitle {
+  font-size: 120%;
+}
+
 #formHolder {
   text-align: center;
 }
