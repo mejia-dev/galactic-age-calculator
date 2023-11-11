@@ -50,6 +50,12 @@ module.exports = {
           'html-loader'
         ]
       },
+      {
+        test: /\.(woff|woff2|ttf)$/,
+        use: {
+          loader: 'url-loader',
+        },
+      },
     ]
   }
 };
