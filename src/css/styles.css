@@ -6,3 +6,20 @@ body {
 .hidden {
   display: none;
 }
+
+#planetsHolder {
+  display: flex;
+  flex-direction: row;
+}
+
+.planetHolder {
+  width: 20%;
+  background-color: pink;
+  border-color: aqua;
+  border-style: dashed;
+}
+
+.planetGIF {
+  width: auto;
+  height: 20%;
+}
