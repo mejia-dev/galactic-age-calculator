@@ -1,11 +1,3 @@
-@font-face {
-  font-family: 'SF Distant Galaxy';
-  font-style: normal;
-  font-weight: normal;
-  src:
-    url('../assets/fonts/SFDistantGalaxy.ttf') format('ttf');
-}
-
 body {
   background-image: url("../assets/images/stars.jpg");
   color: white;
