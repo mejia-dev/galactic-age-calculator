@@ -27,6 +27,7 @@ Option A:
 Option B:
 * Clone this repository to your desktop (from the Git Bash console, run "git clone https://github.com/mejia-dev/galactic-age-calculator.git" without quotes)
 * Install Modules: From the Git Bash console, run "npm install" without quotes.
+* Run Jest Testing: From the Git Bash console, run "npm run test" without quotes.
 * Build Distribution: From the Git Bash console, run "npm run build" without quotes.
 * Launch Webserver: From the Git Bash console, run "npm run start" without quotes.
 
